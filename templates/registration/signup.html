@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        {% block content %}
+    <link href="{% sass_src '_base.scss' %}" rel="stylesheet" type="text/css" />
+    <title>CLUSTER</title>
+</head>
+<body>
+    <section class="container">
+    <h1 class="large text-primary">Sign Up</h1>
+    <p class="lead"><i class="fas fa-user"></i> Create Your Account</p>
+    <form method="post" class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+        <input type="submit" value="Register" class="btn btn-primary">
+    <!-- <submit type="submit" class="btn btn-primary">Sign Up!</submit> -->
+    </form>
+    {% endblock %}
+    </section>
+</body>
+</html>
