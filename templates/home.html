@@ -22,8 +22,9 @@
         <div class="row">
                 <div class="col-4">
                         <h3 class="text-center">New York Bits</h3>
-                        {% for object in object_list %}
-                        <h5 class="card-title"><a href="{{ object.url }}">{{ object.title }}</a></h5>
+                        {% for nyb in nyb_news %}
+                        <!-- <h5 class="card-title"><a href="{{ object.url }}">{{ object.title }}</a></h5> -->
+                        <h5>{{ nyb }}</h5>
                         <hr>
                         {% endfor %}
                         <br>
@@ -31,7 +32,7 @@
                 <div class="col-4">
                         <h3 class="text-center">Times of India</h3>
                         {% for n in toi_news %}
-                        <h5> >>  {{ n }} </h5>
+                        <h5>{{ n }} </h5>
                         <hr>
                         {% endfor %}
                         <br>
@@ -39,7 +40,7 @@
                 <div class="col-4">
                         <h3 class="text-center">The Onion</h3>
                         {% for n in toi_news %}
-                        <h5> >>  {{ n }} </h5>
+                        <h5>{{ n }} </h5>
                         <hr>
                         {% endfor %}
                         <br>
