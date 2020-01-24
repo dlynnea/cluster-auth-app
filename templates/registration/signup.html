@@ -2,6 +2,8 @@
 {% load static %}
 {% load sass_tags %}
 
+{% load crispy_forms_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,7 +20,7 @@
     <p class="lead"><i class="fas fa-user"></i> Create Your Account</p>
     <form method="post" class="form">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form|crispy }}
         <input type="submit" value="Register" class="btn btn-primary">
     <!-- <submit type="submit" class="btn btn-primary">Sign Up!</submit> -->
     </form>
