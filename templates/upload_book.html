@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 
-{% load crispy_forms_tags %}
 
 {% block content %}
 <br>
@@ -8,10 +7,10 @@
 <br>
 <br>
 <br>
-    <h2>Upload Book!</h2>
-    <form method="post" enctype="multipart/form-data">
+    <h2 class="upload-title">Upload Your Next Read</h2>
+    <form method="post" class="upload-form" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form|crispy }}
+        {{ form }}
         <button type="submit" class="btn btn-primary">Upload</button>
     </form>
 {% endblock %}

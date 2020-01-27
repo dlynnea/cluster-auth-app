@@ -6,7 +6,8 @@
 <br>
 <br>
 <br>
-    <h2>Book List!</h2>
+<body>
+    <h2 class="book-list"><i class="fas fa-book"></i> Your list</h2>
 
     <table class="table">
     <thread>
@@ -34,5 +35,7 @@
         </tr>
         {% endfor %}
     </tbody>
-    </table>
+</table>
+<div class="upload-book-btn"><a href="{% url 'upload_book' %}">Add to your list</a></div>
 {% endblock %}
+</body>

@@ -15,10 +15,11 @@
 </head>
 <body>
 <main>
-<p>Welcome to Cluster, {% if user.is_authenticated %}{{ user.username }}{% else %}visitor{% endif %}!</p>
-{% if user.is_authenticated %}
-<h1 class="x-large">Cluster</h1>
+<!-- <br><br><br><br> -->
+<!-- <h1 class="x-large">Cluster</h1> -->
 <div class="container">
+        {% if user.is_authenticated %}
+        <p>Welcome to Cluster, {{ user.username }}!</p>
         <div class="row">
                 <div class="col-4">
                         <h3 class="text-center">New York Bits</h3>
@@ -27,7 +28,10 @@
                         <h5>{{ nyb }}</h5>
                         <hr>
                         {% endfor %}
-                        <br>
+                        <ul>
+                                <li> <h5>in a world where </h5> </li>
+                                <li> <h5>there would be </h5> </li>
+                                </ul>                        <br>
                 </div>
                 <div class="col-4">
                         <h3 class="text-center">Times of India</h3>
@@ -35,6 +39,10 @@
                         <h5>{{ n }} </h5>
                         <hr>
                         {% endfor %}
+                        <ul>
+                        <li> <h5>django and I </h5> </li>
+                        <li> <h5>a beautiful list </h5> </li>
+                        </ul>
                         <br>
                 </div>
                 <div class="col-4">
@@ -43,22 +51,24 @@
                         <h5>{{ n }} </h5>
                         <hr>
                         {% endfor %}
-                        <br>
+                        <ul>
+                                <li> <h5>love each other</h5> </li>
+                                <li> <h5>of scraped articles HERE</h5> </li>
+                                </ul>                        <br>
                 </div>
         </div>
 </div>
     {% else %}
     <div class="dark-overlay">
         <div class="landing-inner">
-        <h1 class="x-large">Cluster Connector</h1>
-                <p class="lead">Create a CLUSTER profile and find your stories!</p>
+        <h1 class="x-large">Cluster Reads</h1>
+                <p class="lead">Create a CLUSTER profile for your daily stories and future reads</p>
                 <div class="buttons">
                         <a href="{% url 'signup' %}" class="btn btn-primary">Create Account</a>
                         <a href="{% url 'login' %}" class="btn">Sign In</a>
                 </div>
         </div>
 </div>
-Log in to see the news!
 {% endif %}
 </main>
 {% endblock %}

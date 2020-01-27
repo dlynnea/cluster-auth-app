@@ -10,16 +10,23 @@
 
 body {
     font-family: 'Raleway', sans-serif;
+    background: url('img/cluster.jpg');
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-position: center;
+    background-size: auto;
+    // opacity: 0.9;
+    z-index: -1;
     font-size: 1rem;
     line-height: 1.6;
-    background-color: $light-color;
-    color: $primary-color;
+    // background-color: rgba(0,0,0,0.5);
+    // background-color: $light-color;
+    color: $light-color;
 
     form.signup-form {
         position: relative;
         margin: auto;
         background-color: $light-color;
-        color: magenta;
         border: 1px solid black;
     }
 }
@@ -28,9 +35,13 @@ a {
     text-decoration: none;
 }
 
-img {
-    width: 100%;
+li {
+    text-decoration: none;
 }
+
+// img {
+//     width: 100%;
+// }
 
 .navbar {
     display: flex;
@@ -42,7 +53,7 @@ img {
     width: 100%;
     top: 0;
     border-bottom: solid 1px $primary-color;
-    opacity: 0.9;
+    opacity: 0.7;
 
     ul {
         display: flex;
@@ -60,7 +71,6 @@ img {
     }
 }
 
-// landing
 
 .landing {
     position: relative;
@@ -79,13 +89,34 @@ img {
         text-align: center;
     }
     
-    
 }
 
-// form.signup-form {
-//     position: relative;
-//     margin: auto;
-//     background-color: $light-color;
-//     color: magenta;
-//     border: 1px solid black;
+.book-list {
+    text-align: center;
+}
+
+.upload-book-btn {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.upload-title {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+h3.text-center {
+    margin-bottom: 20px;
+}
+
+// .col-4 {
+//     border: 1px solid $primary-color;
 // }
+
+h5 {
+    margin-left: 10px;
+}
+
+li {
+    text-decoration: none;
+}
